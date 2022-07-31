@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height:100vh;
+
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin:30px;
+    border-radius: 20px;
+    transition:0.5s;
+    transition-delay:0.5s;
+    /* justify-content: flex-start;
+    align-items: center; */
+}
+.card:hover{
+    width: 600px;
+    /* height: 0px; */
+    transition-delay:0s;
+}
+
+.card .circle{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /* background:rebeccapurple; */
+    border-radius: 20px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.card .circle::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:var(--clr);
+    clip-path: circle(120px at center);
+    transition:0.5s;
+    /* opacity: 1; */
+}
+
+
+.card:hover .circle::before{
+    clip-path: circle(400px at center);
+
+}
+
+.logo{
+    position:relative;
+    width:200px;
+
+    transition:0.5s;
+    transition-delay: 0.5s;
+   
+}
+
+.card:hover .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+
+.content{
+    position: relative;
+    /* display:flex; */
+    width:50%;
+    left:30%;
+    padding:20px 20px 20px 40px;
+    opacity: 0;
+    transition:0.5s;
+    visibility:hidden;
+}
+
+.card:hover .content{
+    left:0;
+    opacity: 1;
+    visibility:visible;
+    transition-delay: 0.5s;
+}
+
+.content h2{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+
+}
+.content p{
+    color:aliceblue;
+}
+
+.content a{
+    position: relative;
+    color:black;
+    background: beige;
+    text-decoration: none;
+    padding:10px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display:inline-block;
+    font-weight: 500;
+    
+}
+
+.card .dev1{
+    position: absolute;
+    top:60%;
+    left:40%;
+    transform:translate(-50%,-50%) scale(0);
+    height: 300px;
+    transition:0.5s;
+    transition-delay: 0s;
+}
+
+.card:hover .dev1{
+    left:72%;
+    transform:translate(-50%,-50%) scale(1);
+    transition-delay:0.5s;
+}
+
+ .button a{
+    
+    left: 34rem;
+    top: 40rem;
+    position: relative;
+    display: flex;
+    padding:15px 30px;
+    color:#2196f3;
+    text-transform: uppercase;
+    transition:0.5s;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+.button a:hover{
+    color:#255784;
+    background:#2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3 ;
+    transition-delay: 0.5s;
+}
+.welcome.banner{
+    position: relative;
+    width:100%;
+    height: 100%;
+    /* background:#111; */
+    /* display: flex;
+    /* color: #fff; */
+     
+    font-family: 'Poppins', sans-serif;
+
+}
+.banner{
+    position: relative;
+    /* width: 100%;
+    height: 100vh; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner video{
+    position:absolute;
+    object-fit: cover;
+}
+.banner h2{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    /* width:100%;
+    height:100%; */
+    background:#fff;
+    font-size: 13rem;
+    text-align: center;
+    text-transform: uppercase;
+    mix-blend-mode: screen;
+}
+/* footer {
+    background: var(--dark);
+    text-align: center;
+    padding: 5rem 2rem;
+    justify-content: center;
+    position: sticky;
+}
+.footer-logo{
+    margin-bottom: 2rem;
+}
+
+footer .socials a {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+footer .socials {
+    margin-bottom: 2rem;
+    margin-right: -1rem;
+} */
+
+/* Responsive */
+
+@media(max-width:991px){
+.card{
+    width:auto;
+    max-width: 350px;
+    align-items: flex-start;
+}
+
+.card:hover{
+    height: 600px;
+}
+
+
+
+.card:hover .dev1{
+    top:initial;
+    bottom:30px;
+    left:40%;
+    transform:translate(-50%,0%) scale(1);
+    height: 280px;
+}
+
+.card .content{
+    width:100%;
+    left:0;
+    padding: 40px;
+}
+.welcome.banner{
+    /* position: relative; */
+    width:50%;
+    height: 50%;
+}
+.banner h2{
+    font-size: 6rem; 
+    /* align-items: center;
+    justify-content:center; */
+
+}
+.button a{
+    left: 2rem;
+    top: 80rem;
+    position: relative;
+    display: flex;
+    padding:15px 30px;
+
+}
+
+
+
+}
